@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SuperSol.Pages
 {
-    public class ProductDesignModel : PageModel
+    public class ConsultingModel : PageModel
     {
         public void OnGet()
         {

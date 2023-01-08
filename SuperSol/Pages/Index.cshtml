@@ -3,7 +3,53 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
 
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-xl-10 col-lg-12">
+                <h1>Powerful Digital Solutions for your Business<span>.</span></h1>
+                <h2>A team of highly motivated professionals.</h2>
+            </div>
+        </div>
+
+        <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+            <div class="col-xl-2 col-md-4">
+                <div class="icon-box">
+                    <i class="ri-store-line"></i>
+                    <h3><a asp-area="" asp-page="/productDesign">Product Design</a></h3>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-laptop"></i>
+                    <h3><a asp-area="" asp-page="/Development">Development</a></h3>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4">
+                <div class="icon-box">
+                    <i class="ri-bar-chart-box-line"></i>
+                    <h3><a href="">Data Analytics</a></h3>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                    <h3><a href="">Cyber Security</a></h3>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-person-fill"></i>
+                    <h3><a href="">Consulting</a></h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Hero -->
+<main id="main">
  <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -105,16 +151,16 @@ We offer businesses the best services on the global platform. We provide solutio
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-laptop"></i></div>
-              <h4><a href="">Development</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+              <h4><a asp-area="" asp-page="/Development">Development</a></h4>
+              <p>Service involves creating custom software solutions for you, including designing and building applications, as well as maintaining and updating them as needed. Service include custom application development, website development, and mobile app development. </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="ri-store-line"></i></div>
-              <h4><a href="">Product Design</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+                        <h4><a asp-area="" asp-page="/productDesign">Product Design</a></h4>
+              <p>Service involves designing and prototyping new product or product features, including user research, user interface and experience design and testing prototypes with users.</p>
             </div>
           </div>
 
@@ -122,7 +168,7 @@ We offer businesses the best services on the global platform. We provide solutio
             <div class="icon-box">
               <div class="icon"><i class="ri-bar-chart-box-line"></i></div>
               <h4><a href="">Data Analytics</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+              <p>Service involves collecting, analyzing, and interpreting data to help clients make informed decisions. This can include creating dashboards and reports, performing statistical analysis, and providing data-driven recommendations.</p>
             </div>
           </div>
 
@@ -130,7 +176,7 @@ We offer businesses the best services on the global platform. We provide solutio
             <div class="icon-box">
               <div class="icon"><i class="bi bi-shield-lock"></i></div>
               <h4><a href="">Cyber Security</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+              <p>Service involves protecting client systems and data from unauthorized access or attacks. This can include implementing security measures such as firewalls and encryption, as well as responding to and recovering from security breaches.</p>
             </div>
           </div>
 
@@ -138,7 +184,7 @@ We offer businesses the best services on the global platform. We provide solutio
             <div class="icon-box">
               <div class="icon"><i class="bi bi-person-fill"></i></div>
               <h4><a href="">Consulting</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+              <p>Service involves providing expert advice and guidance to clients on a particular topic or area of expertise. This can include analyzing business processes, identifying areas for improvement, and recommending solutions.</p>
             </div>
           </div>
 
@@ -146,7 +192,7 @@ We offer businesses the best services on the global platform. We provide solutio
             <div class="icon-box">
               <div class="icon"><i class="bi bi-cloud"></i></div>
               <h4><a href="">Cloud Solutions</a></h4>
-              <p>Our product design service lets you prototype, test and validate your ideas.</p>
+              <p>Service involves helping clients move their applications and data to the cloud, as well as managing and maintaining their cloud infrastructure. This can include selecting a cloud provider, designing a cloud architecture, and optimizing performance and cost.</p>
             </div>
           </div>
 
@@ -598,7 +644,7 @@ We offer businesses the best services on the global platform. We provide solutio
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="POST" role="form" class="email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -613,12 +659,8 @@ We offer businesses the best services on the global platform. We provide solutio
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+             
+              <div class="text-center"><button class="btn-submit" type="submit">Send Message</button></div>
             </form>
 
           </div>
@@ -627,3 +669,4 @@ We offer businesses the best services on the global platform. We provide solutio
 
       </div>
     </section><!-- End Contact Section -->
+    </main>

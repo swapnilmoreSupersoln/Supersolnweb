@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EASendMail" Version="7.9.1.1" />
+  </ItemGroup>
+
 </Project>

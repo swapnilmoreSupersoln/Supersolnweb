@@ -290,3 +290,22 @@
   new PureCounter();
 
 })()
+
+$(document).ready(function () {
+    let redirect = window.location.href;
+
+
+
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+    let value = params.hasData;
+    if (value == 'True') {
+        if (confirm("Your message has been sent. Thank you!")) {
+            window.location.href = redirect.split('?')[0];
+        } else {
+            window.location.href = redirect.split('?')[0];
+        }
+    }
+});

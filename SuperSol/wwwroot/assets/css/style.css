@@ -130,9 +130,10 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 15px 0;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #header.header-scrolled,
@@ -1334,18 +1335,18 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
-  background: #ffc451;
-  border: 0;
-  padding: 10px 24px;
-  color: #151515;
-  transition: 0.4s;
-  border-radius: 4px;
+.email-form .btn-submit {
+    background: #ffc451;
+    border: 0;
+    padding: 10px 24px;
+    color: #151515;
+    transition: 0.4s;
+    border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: #ffcd6b;
-}
+    .email-form .btn-submit:hover {
+        background: #ffcd6b;
+    }
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -1570,4 +1571,8 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+#otherpages {
+    margin:105px;
 }
